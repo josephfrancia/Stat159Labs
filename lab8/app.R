@@ -5,14 +5,13 @@ output: html_document
 
 
 
-```{r pressure, echo=FALSE}
 library(shiny)
-data=read.csv("/Users/josephfrancia/Desktop/Fall_2016/Stats159/stat159-fall2016-hw03/data/Advertising.csv")
+data=read.csv("Advertising.csv")
 
 
 ui=fluidPage(
   actionButton("click", label="Generate Graph"),
-  radioButtons("select", label = h3("Advertising Medium"),
+  selectInput("select", label = h3("Select Box"),
       choices = list("Radio" = "Radio", "Newspaper" = "Newspaper", "Television" =       "Television")), 
   plotOutput("graph"))
 
@@ -27,7 +26,7 @@ server=function(input, output){
   if(input$select=="Television"){
     x=data$Television
   }
-  output$graph=renderPlot({plot(x,data$Sales)})
+  output$graph=renderPlot({plot(x,data$Sales, ylab="Sales", main="Impact of Advertising on Sales", xlab=input$select)})
   })
 }
 
@@ -36,4 +35,4 @@ shinyApp(ui = ui, server = server)
 
 
 
-```
+
