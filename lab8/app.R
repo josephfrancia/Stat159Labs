@@ -26,7 +26,9 @@ server=function(input, output){
   if(input$select=="Television"){
     x=data$Television
   }
-  output$graph=renderPlot({plot(x,data$Sales, ylab="Sales", main="Impact of Advertising on Sales", xlab=input$select)})
+  output$graph=
+    renderPlot({plot(x,data$Sales, ylab="Sales", main="Impact of Advertising on Sales", xlab=input$select)
+                abline(lm(data$Sales~x))})
   })
 }
 
