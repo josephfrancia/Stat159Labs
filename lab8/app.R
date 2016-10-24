@@ -24,7 +24,7 @@ server=function(input, output){
     x=data$Newspaper
   }
   if(input$select=="Television"){
-    x=data$Television
+    x=data$TV
   }
   output$graph=
     renderPlot({plot(x,data$Sales, ylab="Sales", main="Impact of Advertising on Sales", xlab=input$select)
