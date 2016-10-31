@@ -1,12 +1,11 @@
 \documentclass{article}
-
 \begin{document}
 \SweaveOpts{concordance=TRUE}
 
-Joseph Francia \\  
-Professor Gaston Sanchez \\ 
-Stats 159  \\
-31 October 2016 \\  
+\title{Lab9}
+\date{October 31, 2016}
+\author{Joseph Francia}
+\maketitle
 
 \section{Abstract}
 

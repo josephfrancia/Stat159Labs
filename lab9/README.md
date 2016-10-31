@@ -1,0 +1,1 @@
+In this lab, I recreated my homework 2 report using an Rnw file. I used latex syntax within the Rnw file. In order to generate the lab9.pdf document, I opened lab9.Rnw in RStudio, and I pressed the "Compile PDF" button. 
